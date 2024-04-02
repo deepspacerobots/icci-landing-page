@@ -1,0 +1,36 @@
+.hero-container {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	justify-content: center;
+	height: 500px;
+}
+
+.hero-subtitle {
+	margin-bottom: 0.5rem;
+	font-size: 1rem;
+	width: 60%;
+	text-align: center;
+	@include sm-and-up {
+		width: auto;
+	}
+}
+
+.hero-title {
+	margin-bottom: 0;
+	font-size: 1.7rem;
+	@include sm-and-up {
+		font-size: 2.3rem;
+	}
+}
+
+.button.get-started-button {
+	display: flex;
+	align-items: center;
+	margin-top: 1rem;
+
+	img {
+		width: 1rem;
+		margin-right: 0.5rem;
+	}
+}
