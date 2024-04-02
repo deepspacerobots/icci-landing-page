@@ -1,0 +1,47 @@
+.button,
+button,
+[type='button'],
+[type='reset'],
+[type='submit'] {
+	--button-height: 2rem;
+	--button-background: var(--color-amber);
+	--button-color: var(--color-blue-dark);
+	--button-border: var(--color-amber);
+	background-color: var(--button-background);
+	color: var(--button-color);
+	border: 2px solid var(--button-border);
+	border-radius: calc(var(--button-height) / 2);
+	cursor: pointer;
+	display: inline-block;
+	text-decoration: none;
+	white-space: nowrap;
+	font: 400 0.8rem/1 var(--font-sans);
+	height: var(--button-height);
+	padding: 0.5rem 1rem;
+	transition: background-color 150ms, border-color 150ms;
+}
+
+:is(.button, button, [type='button'], [type='reset'], [type='submit']):where(
+		:hover,
+		:focus
+	) {
+	--button-background: var(--color-amber-light);
+	--button-border: var(--color-amber-light);
+}
+
+.button-outline {
+	font-weight: 600;
+	--button-background: var(--color-blue-dark);
+	--button-color: var(--color-amber);
+	--button-border: var(--color-amber);
+}
+.button-outline:where(:hover, :focus) {
+	--button-background: var(--color-blue-darker);
+	--button-color: var(--color-amber-light);
+	--button-border: var(--color-amber-light);
+}
+.button-group {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.5rem;
+}
