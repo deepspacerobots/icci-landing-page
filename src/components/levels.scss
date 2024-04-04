@@ -1,0 +1,114 @@
+.levels-container {
+	display: grid;
+	gap: 2rem;
+	grid-template-columns: 1fr;
+
+	@include sm-and-up {
+		grid-template-columns: repeat(2, 1fr);
+	}
+	@include md-and-up {
+		grid-template-columns: repeat(3, 1fr);
+	}
+}
+
+.level-card {
+	border: 1px solid var(--color-blue);
+	padding: 1rem;
+	border-radius: 5px;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.level-description-container {
+	display: flex;
+	margin-bottom: 1.5rem;
+	align-self: flex-start;
+}
+
+.level-pillar-container {
+	flex-shrink: 0;
+	width: 2.1rem;
+	margin-right: 0.3rem;
+	position: relative;
+}
+
+.level-course-number {
+	position: absolute;
+	transform: translateX(-50%);
+	left: 50%;
+	margin: 0;
+	font-size: 1.2rem;
+	line-height: 1;
+	color: var(--color-amber);
+}
+
+.level-title {
+	font-size: 1.2rem;
+	color: var(--color-amber);
+	margin-bottom: 0.6rem;
+}
+
+.level-subtitle {
+	margin-bottom: 0.2rem;
+	font-size: 0.6rem;
+}
+
+.level-description {
+	font-size: 0.8rem;
+	margin-bottom: 0;
+	line-height: 1.3;
+}
+
+.level-action-button {
+	width: 100%;
+	margin-bottom: 0.6rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.margin-top-auto {
+	margin-top: auto;
+}
+
+.level-price-container {
+	display: flex;
+	align-items: center;
+	margin-bottom: 0.8rem;
+	width: 100%;
+}
+
+.level-price {
+	font-family: var(--font-serif);
+	margin: 0 0.3rem;
+}
+
+.level-price-line {
+	border: 0.5px solid var(--color-amber);
+	margin: 0;
+	flex-grow: 1;
+}
+
+.level-link {
+	font-size: 0.9rem;
+	font-weight: 400;
+	display: flex;
+	align-items: center;
+}
+
+.level-link-icon {
+	width: 0.7rem;
+	margin-right: 0.5rem;
+}
+
+.level-dropdown-icon {
+	margin-left: 0.6rem;
+	width: 0.6rem;
+}
+
+.level-call-icon {
+	margin-right: 0.4rem;
+	width: 0.7rem;
+}
