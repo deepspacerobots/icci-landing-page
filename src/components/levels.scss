@@ -2,6 +2,7 @@
 	display: grid;
 	gap: 2rem;
 	grid-template-columns: 1fr;
+	margin-bottom: 6rem;
 
 	@include sm-and-up {
 		grid-template-columns: repeat(2, 1fr);
@@ -30,7 +31,7 @@
 .level-pillar-container {
 	flex-shrink: 0;
 	width: 2.1rem;
-	margin-right: 0.3rem;
+	margin-right: 0.5rem;
 	position: relative;
 }
 
