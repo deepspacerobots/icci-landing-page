@@ -47,7 +47,7 @@
 	text-transform: uppercase;
 	font-weight: 400;
 	margin-bottom: 0.2rem;
-	@include md-and-up {
+	@include sm-and-up {
 		font-size: 0.6rem;
 	}
 }
@@ -55,7 +55,7 @@
 .membership-title {
 	font-size: 2rem;
 	margin-bottom: 0.7rem;
-	@include md-and-up {
+	@include sm-and-up {
 		font-size: 1.7rem;
 	}
 }
@@ -65,7 +65,7 @@
 	span {
 		color: var(--color-amber);
 	}
-	@include md-and-up {
+	@include sm-and-up {
 		font-size: 0.8rem;
 	}
 }
@@ -85,7 +85,7 @@
 		margin-bottom: 0.2rem;
 	}
 
-	@include md-and-up {
+	@include sm-and-up {
 		flex-direction: row;
 		font-size: 0.8rem;
 	}
