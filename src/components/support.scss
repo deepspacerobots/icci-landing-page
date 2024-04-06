@@ -1,0 +1,48 @@
+.section-support {
+	position: relative;
+	overflow: hidden;
+	@include md-and-up {
+		padding: 2rem 0 1rem;
+	}
+}
+
+.support-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-bottom: 3rem;
+}
+
+.support-title {
+	font-family: var(--font-serif);
+	margin-bottom: 0.8rem;
+}
+
+.support-description {
+	font-size: 0.8rem;
+	margin-bottom: 1rem;
+}
+
+.support-button {
+	display: flex;
+	align-items: center;
+	img {
+		margin-right: 0.3rem;
+	}
+}
+
+.support-picture {
+	position: absolute;
+	border-radius: 50%;
+	width: 10rem;
+	height: 10rem;
+	object-fit: cover;
+	object-position: center;
+	right: -2rem;
+	top: 1rem;
+	border: 1px solid var(--color-blue-lighter);
+	display: none;
+	@include md-and-up {
+		display: block;
+	}
+}
