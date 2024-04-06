@@ -1,5 +1,8 @@
 .section-faq {
-	margin-bottom: 8rem;
+	margin-bottom: 3rem;
+	@include md-and-up {
+		margin-bottom: 8rem;
+	}
 }
 
 .faq-title {

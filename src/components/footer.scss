@@ -1,0 +1,84 @@
+footer {
+	padding-bottom: 1rem;
+}
+
+.footer-container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 1rem;
+	@include md-and-up {
+		margin-bottom: 1.3rem;
+	}
+}
+
+.footer-logo {
+	width: 13rem;
+	margin-bottom: 0.5rem;
+	@include md-and-up {
+		width: 18rem;
+	}
+}
+
+.footer-description {
+	font-size: 0.8rem;
+	@include md-and-up {
+		font-size: 0.9rem;
+	}
+}
+
+.footer-nav-list {
+	list-style-type: none;
+	font-size: 0.7rem;
+	text-align: right;
+	display: none;
+	@include md-and-up {
+		display: block;
+	}
+	li {
+		&:first-of-type {
+			color: var(--color-amber);
+		}
+		margin-bottom: 0.3rem;
+	}
+
+	a {
+		color: var(--color-text-light);
+		font-weight: 400;
+	}
+}
+
+.footer-sub {
+	p {
+		margin-bottom: 0;
+		color: var(--color-blue-even-lighter);
+		font-size: 0.6rem;
+		margin-bottom: 1rem;
+		@include md-and-up {
+			width: 60%;
+			margin-bottom: 0;
+		}
+	}
+	@include md-and-up {
+		display: flex;
+	}
+}
+
+.footer-sub-links {
+	width: 40%;
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+	@include md-and-up {
+		flex-direction: row;
+	}
+	a {
+		color: var(--color-blue-even-lighter);
+		font-size: 0.6rem;
+		font-weight: 400;
+		margin-bottom: 0.2rem;
+		@include md-and-up {
+			margin-bottom: 0;
+		}
+	}
+}
