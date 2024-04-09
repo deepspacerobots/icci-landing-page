@@ -1,0 +1,153 @@
+.course-hero {
+	padding-top: 3rem;
+	margin-bottom: 5rem;
+	@include sm-and-up {
+		margin-bottom: 4rem;
+		padding-top: 3rem;
+	}
+}
+
+.course-hero-container {
+	display: flex;
+	align-items: center;
+	position: relative;
+	flex-direction: column;
+	@include sm-and-up {
+		flex-direction: row;
+	}
+}
+
+.course-circle {
+	position: absolute;
+	aspect-ratio: 1 / 1;
+	width: 100%;
+	border-radius: 50%;
+	border: 1px solid var(--color-blue-lighter);
+	border-bottom-color: var(--color-blue-light);
+	border-left-color: var(--color-blue-light);
+	left: 50%;
+	top: 50%;
+	max-width: 90%;
+	opacity: 60%;
+	transform: translate(-50%, -50%) rotate(45deg);
+	z-index: -1;
+	@include sm-and-up {
+		width: 12rem;
+		height: 12rem;
+		left: 5rem;
+		top: 50%;
+		transform: translateY(-50%) rotate(45deg);
+	}
+}
+
+.course-video-container {
+	display: none;
+	@include sm-and-up {
+		display: block;
+		width: 40%;
+	}
+	@include md-and-up {
+		width: 30%;
+	}
+}
+
+.course-description-container {
+	display: flex;
+	align-items: center;
+	width: 90%;
+	flex-direction: column;
+	@include sm-and-up {
+		width: 60%;
+		flex-direction: row;
+	}
+	@include md-and-up {
+		width: 70%;
+	}
+}
+
+.course-text-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	@include sm-and-up {
+		align-items: flex-start;
+	}
+}
+
+.course-pillar-container {
+	flex-shrink: 0;
+	width: 4rem;
+	margin-right: 1.5rem;
+	position: relative;
+	display: none;
+	@include sm-and-up {
+		display: block;
+	}
+}
+
+.course-course-number {
+	position: absolute;
+	transform: translateX(-50%);
+	left: 50%;
+	margin: 0;
+	font-size: 2.3rem;
+	line-height: 1;
+	color: var(--color-amber);
+}
+
+.course-title {
+	font-size: 1.5rem;
+	margin-bottom: 1rem;
+	text-align: center;
+	@include sm-and-up {
+		text-align: left;
+	}
+	@include md-and-up {
+		font-size: 2rem;
+	}
+}
+
+.course-subtitle {
+	margin-bottom: 0.5rem;
+	text-align: center;
+	font-size: 0.9rem;
+	@include sm-and-up {
+		text-align: left;
+		font-size: 0.9rem;
+	}
+}
+
+.course-hero-buttons {
+	display: flex;
+	flex-direction: column;
+	align-items: stretch;
+}
+
+.button.course-action-button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	img {
+		width: 1rem;
+		margin-right: 0.5rem;
+	}
+}
+
+button.button.course-action-button {
+	margin-bottom: 0.5rem;
+	@include sm-and-up {
+		margin-bottom: 0;
+	}
+}
+
+.button.course-video-button {
+	display: flex;
+	@include sm-and-up {
+		display: none;
+	}
+}
+
+// CACLC
+.caclc-faq-section {
+	margin-bottom: 2rem !important;
+}

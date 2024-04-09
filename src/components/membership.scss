@@ -1,7 +1,11 @@
+.section-membership {
+	position: relative;
+}
+
 .membership-container {
 	border: 1px solid var(--color-blue-lighter);
 	border-radius: 18rem 18rem 8rem 1rem;
-	margin-bottom: 5rem;
+	margin-bottom: 7rem;
 	position: relative;
 	padding-bottom: 1.5rem;
 	display: flex;
@@ -11,6 +15,20 @@
 		display: block;
 		padding: 1rem 3rem 1rem 19rem;
 		border-radius: 15rem;
+	}
+}
+
+.membership-circle {
+	border-radius: 50%;
+	width: 4rem;
+	height: 4rem;
+	border: 1px solid var(--color-blue-lighter);
+	position: absolute;
+	bottom: 1.5rem;
+	transform: translateX(-50%);
+	display: block;
+	@include md-and-up {
+		display: none;
 	}
 }
 
