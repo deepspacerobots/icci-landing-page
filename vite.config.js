@@ -1,7 +1,18 @@
 import { defineConfig } from 'vite';
+import { resolve } from 'path';
 
 export default defineConfig(() => {
 	return {
+		build: {
+			rollupOptions: {
+				input: {
+					main: resolve(__dirname, 'index.html'),
+					caclc: resolve(__dirname, 'caclc.html'),
+					cpclc: resolve(__dirname, 'cpclc.html'),
+					cmclc: resolve(__dirname, 'cmclc.html'),
+				},
+			},
+		},
 		css: {
 			preprocessorOptions: {
 				scss: {
