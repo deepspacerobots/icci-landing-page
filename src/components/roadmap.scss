@@ -28,6 +28,7 @@
 	padding: 0.8rem;
 	border-radius: 0.3rem;
 	border: 1px solid var(--color-blue-light);
+	background-color: rgba(1, 103, 165, 0.19);
 	&.roadmap-step-card-selected {
 		border: 1px solid var(--color-amber);
 		background: var(--color-blue-light);
@@ -65,6 +66,23 @@
 
 .roadmap-step-description {
 	font-size: 0.8rem;
+}
+
+.roadmap-buy-container {
+	border: 1px solid #011936;
+	padding: 1rem 0.8rem 0.8rem;
+	border-radius: 0.3rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.roadmap-buy-title {
+	font-family: var(--font-serif);
+	font-size: 0.8rem;
+	text-align: center;
+	margin-bottom: 0.8rem;
 }
 
 .roadmap-comment {

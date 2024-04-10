@@ -44,5 +44,10 @@ button,
 }
 .button-icon {
 	display: flex;
+	justify-content: center;
 	align-items: center;
+	img {
+		width: 1rem;
+		margin-right: 0.5rem;
+	}
 }
