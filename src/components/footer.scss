@@ -12,9 +12,12 @@ footer {
 	}
 }
 
+.footer-logo-link {
+	display: inline-block;
+}
+
 .footer-logo {
 	width: 13rem;
-	margin-bottom: 0.5rem;
 	@include md-and-up {
 		width: 18rem;
 	}
