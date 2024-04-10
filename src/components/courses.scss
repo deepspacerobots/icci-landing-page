@@ -147,8 +147,22 @@ button.button.course-action-button {
 	}
 }
 
+.course-buy-section {
+	margin-bottom: 5rem;
+}
+
+.course-buy-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.course-buy-title {
+	font-family: var(--font-serif);
+}
+
 // Some overrides
-// CACLC
-.section-faq.caclc-faq-section {
+.section-faq.course-faq-section {
 	margin-bottom: 2rem;
 }
