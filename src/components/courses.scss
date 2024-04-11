@@ -85,12 +85,12 @@
 	}
 }
 
-.course-course-number {
+.course-number {
 	position: absolute;
 	transform: translateX(-50%);
 	left: 50%;
 	margin: 0;
-	font-size: 2.3rem;
+	font-size: 2.2rem;
 	line-height: 1;
 	color: var(--color-amber);
 }
@@ -160,6 +160,16 @@ button.button.course-action-button {
 
 .course-buy-title {
 	font-family: var(--font-serif);
+}
+
+.course-spec-button {
+	display: flex;
+	align-items: center;
+}
+
+.course-dropdown-icon {
+	width: 0.6rem;
+	margin-left: 0.5rem;
 }
 
 // Some overrides

@@ -27,10 +27,11 @@ button,
 }
 
 .button-outline {
-	font-weight: 600;
+	font-weight: 400;
 	background-color: var(--color-blue-dark);
 	color: var(--color-amber);
 	border-color: var(--color-amber);
+	border-width: 1px;
 }
 .button-outline:where(:hover, :focus) {
 	background-color: var(--color-blue-darker);
@@ -48,6 +49,15 @@ button,
 	align-items: center;
 	img {
 		width: 1rem;
-		margin-right: 0.5rem;
+	}
+	&-right {
+		img {
+			margin-left: 0.5rem;
+		}
+	}
+	&-left {
+		img {
+			margin-right: 0.5rem;
+		}
 	}
 }
