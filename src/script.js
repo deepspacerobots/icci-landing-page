@@ -1,4 +1,5 @@
 'use strict';
+import { SpecializationForm } from './components/specializationForm';
 import { Testimonials } from './components/testimonials';
 
 // import global scss
@@ -11,3 +12,4 @@ const slider = document.querySelector('.testimonials');
 if (slider) {
 	Testimonials(slider);
 }
+SpecializationForm();
