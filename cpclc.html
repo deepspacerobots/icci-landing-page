@@ -181,15 +181,22 @@
 							Ready To Get Started?
 						</h4>
 						<div class="button-group">
-							<button class="button-outline course-spec-button">
-								Pick your Specialization
-								<img
-									src="img/icons/dropdown.svg"
-									class="course-dropdown-icon"
-									alt="Arrow"
-								/>
-							</button>
-							<button class="button course-action-button">
+							<form class="specialization-form" id="specializations-form">
+								<select
+									name="specialization"
+									class="button button-outline specialization-select level-action-button button-icon button-icon-left"
+									required
+								></select>
+								<fieldset
+									id="courses"
+									class="specialization-fieldset"
+								></fieldset>
+							</form>
+							<button
+								class="button course-action-button"
+								id="go-next-btn"
+								disabled
+							>
 								<img src="img/icons/cart-dark.svg" alt="" />Add to cart
 							</button>
 						</div>
