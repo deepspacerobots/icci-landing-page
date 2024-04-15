@@ -139,6 +139,9 @@ export const SpecializationForm = () => {
 	// important elements
 	const selector = document.querySelector('[name="specialization"]');
 	const courseWrapper = document.querySelector('#courses');
+	const button = `<button class="level-action-button button-icon button-icon-left" id="go-next-btn" disabled>
+  <img class="cart-icon" src="img/icons/cart-dark.svg" alt="" />
+  Add to Cart</button>`;
 
 	const state = {
 		woocommerceQuery: new URLSearchParams(),
@@ -155,30 +158,42 @@ export const SpecializationForm = () => {
 
 	function buildCourses(courseIds = []) {
 		let checkboxes = '';
+		const goNextButton = document.getElementById('go-next-btn');
+
 		if (courseIds.length > 0) {
 			checkboxes += courses
 				.filter((c) => courseIds.includes(c.id))
 				.map((c) => {
-					return `<label>
-						<input type="checkbox" value="${c.id}" />
+					return `<label class="specialization-label">
+						<input type="checkbox" value="${c.id}" id=${c.id} />
 						<span class="title">${c.title}</span>
 					</label>`;
 				})
-				.join('<br>');
+				.join('');
 		}
 		courseWrapper.innerHTML = checkboxes;
+		if (!goNextButton) {
+			courseWrapper.insertAdjacentHTML('afterend', button);
+		}
 
 		// listen for changes
 		const inputs = courseWrapper.querySelectorAll('[type="checkbox"]');
 		inputs.forEach((input) => {
-			input.addEventListener('change', () => {});
+			input.addEventListener('change', () => {
+				const goNextButton = document.querySelector('#go-next-btn');
+				if (getSelectedCheckboxes() === 3) {
+					goNextButton.disabled = false;
+				} else {
+					goNextButton.disabled = true;
+				}
+			});
 		});
 	}
 
 	function buildSelector() {
 		// build the options
 		let options =
-			'<option selected disabled value="">Select a Specialization</option>';
+			'<option selected value="no-selection">Choose Specialization</option>';
 		options += specializations
 			.map((s) => {
 				return `<option value="${s.title}">${s.title}</option>`;
@@ -187,13 +202,46 @@ export const SpecializationForm = () => {
 
 		// add them to the dom
 		selector.insertAdjacentHTML('beforeend', options);
-
 		// listen for changes
-		selector.addEventListener('change', () => {
-			const specialization = specializations.find(
-				(s) => s.title == selector.value
-			);
-			buildCourses(specialization.courses);
+		selector.addEventListener('change', (e) => {
+			const caclcCard = document.querySelector('#caclc');
+			const cmclcCard = document.querySelector('#cmclc');
+
+			if (e.target.value !== 'no-selection') {
+				const specialization = specializations.find(
+					(s) => s.title == selector.value
+				);
+				caclcCard?.classList.add('level-card-disabled');
+				cmclcCard?.classList.add('level-card-disabled');
+				buildCourses(specialization.courses);
+			} else {
+				const labels = document.querySelectorAll('#courses label');
+				caclcCard?.classList.remove('level-card-disabled');
+				cmclcCard?.classList.remove('level-card-disabled');
+				labels.forEach((label) => label.remove());
+				const goNextButton = document.querySelector('#go-next-btn');
+				if (goNextButton) {
+					goNextButton.remove();
+				}
+			}
 		});
 	}
 };
+
+function getSelectedCheckboxes() {
+	const form = document.getElementById('specializations-form'); // Select the form element
+	const fieldset = form.querySelector('fieldset'); // Get the fieldset within the form
+	// Check if a fieldset is found
+	if (!fieldset) {
+		console.error('No fieldset found within the form');
+		return;
+	}
+	const checkboxes = fieldset.querySelectorAll("input[type='checkbox']"); // Get all checkboxes
+	let count = 0;
+	for (const checkbox of checkboxes) {
+		if (checkbox.checked) {
+			count++; // Increment count for each checked checkbox
+		}
+	}
+	return count;
+}

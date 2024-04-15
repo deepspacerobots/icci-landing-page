@@ -18,6 +18,12 @@ button,
 	transition: background-color 150ms, border-color 150ms;
 }
 
+button:disabled,
+button[disabled] {
+	opacity: 50%;
+	pointer-events: none;
+}
+
 :is(.button, button, [type='button'], [type='reset'], [type='submit']):where(
 		:hover,
 		:focus

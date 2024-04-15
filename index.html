@@ -52,22 +52,6 @@
 				</div>
 			</header>
 
-			<section class="section">
-				<div class="container-lg">
-					<div class="certs">
-						<div class="cert">1</div>
-						<div class="cert">
-							<form class="specialization-selector">
-								<select name="specialization" required></select>
-								<fieldset id="courses"></fieldset>
-								<button>finish</button>
-							</form>
-						</div>
-						<div class="cert">2</div>
-					</div>
-				</div>
-			</section>
-
 			<!-- DISCOUNT | css:/components/discount.scss -->
 			<section class="section-discount">
 				<div class="container-lg">
@@ -93,7 +77,7 @@
 				<div class="container-lg">
 					<div class="levels-container">
 						<!-- Associate level -->
-						<article class="level-card">
+						<article class="level-card" id="caclc">
 							<div class="level-description-container">
 								<div class="level-pillar-container">
 									<h3 class="level-course-number">1</h3>
@@ -107,7 +91,8 @@
 									</p>
 								</div>
 							</div>
-							<button class="level-action-button margin-top-auto">
+							<button class="level-action-button button-icon button-icon-left">
+								<img class="cart-icon" src="img/icons/cart-dark.svg" alt="" />
 								Add to cart
 							</button>
 							<div class="level-price-container">
@@ -125,7 +110,7 @@
 						</article>
 
 						<!-- Professional level -->
-						<article class="level-card">
+						<article class="level-card" id="cpclc">
 							<div class="level-description-container">
 								<div class="level-pillar-container">
 									<h3 class="level-course-number">2</h3>
@@ -139,7 +124,18 @@
 									</p>
 								</div>
 							</div>
-							<button
+							<form class="specialization-selector" id="specializations-form">
+								<select
+									name="specialization"
+									class="button button-outline specialization-select level-action-button button-icon button-icon-left"
+									required
+								></select>
+								<fieldset
+									id="courses"
+									class="specialization-fieldset"
+								></fieldset>
+							</form>
+							<!-- <button
 								class="level-action-button button-outline margin-top-auto"
 							>
 								Choose Specialization
@@ -148,7 +144,7 @@
 									alt=""
 									class="level-dropdown-icon"
 								/>
-							</button>
+							</button> -->
 							<div class="level-price-container">
 								<hr class="level-price-line" />
 								<h4 class="level-price">$1,185</h4>
@@ -164,7 +160,7 @@
 						</article>
 
 						<!-- Master level -->
-						<article class="level-card">
+						<article class="level-card" id="cmclc">
 							<div class="level-description-container">
 								<div class="level-pillar-container">
 									<h3 class="level-course-number">3</h3>
@@ -184,7 +180,7 @@
 								/>Call for Pricing
 							</button>
 
-							<a href="./cmclc.html" class="level-link margin-top-auto"
+							<a href="./cmclc.html" class="level-link"
 								><img
 									src="img/icons/link.svg"
 									class="level-link-icon"
