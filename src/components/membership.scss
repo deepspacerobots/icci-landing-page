@@ -80,7 +80,7 @@
 
 .membership-description {
 	font-size: 1rem;
-	span {
+	strong {
 		color: var(--color-amber);
 	}
 	@include sm-and-up {

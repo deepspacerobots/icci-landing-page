@@ -44,6 +44,20 @@
 .discount-description {
 	font-size: 0.8rem;
 	@include sm-and-up {
-		font-size: 0.9rem;
+		font-size: 0.85rem;
+	}
+}
+
+.discount-description-dots {
+	display: inline-block;
+	@include sm-and-up {
+		display: none;
+	}
+}
+
+.discount-description-extra {
+	display: none;
+	@include sm-and-up {
+		display: inline-block;
 	}
 }

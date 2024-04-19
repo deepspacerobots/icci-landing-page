@@ -12,13 +12,15 @@
 
 .hero-subtitle {
 	margin-top: 4rem;
-	margin-bottom: 0.5rem;
-	font-size: 1rem;
+	margin-bottom: 1rem;
+	font-size: 0.85rem;
 	width: 60%;
 	text-align: center;
 	z-index: 3;
 	@include sm-and-up {
 		width: auto;
+		font-size: 1rem;
+		margin-bottom: 0.5rem;
 	}
 	@include md-and-up {
 		margin-top: 7rem;
@@ -37,9 +39,10 @@
 .button.hero-get-started-button {
 	display: flex;
 	align-items: center;
-	margin: 1rem 0 10rem;
+	margin: 1.5rem 0 10rem;
 	@include sm-and-up {
 		margin: 1rem 0;
+		margin-top: 1rem;
 	}
 
 	img {

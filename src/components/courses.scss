@@ -1,6 +1,6 @@
 .course-hero {
 	padding-top: 3rem;
-	margin-bottom: 5rem;
+	margin-bottom: 7rem;
 	@include sm-and-up {
 		margin-bottom: 4rem;
 		padding-top: 3rem;
@@ -172,7 +172,10 @@ button.button.course-action-button {
 	margin-left: 0.5rem;
 }
 
-// Some overrides
-.section-faq.course-faq-section {
-	margin-bottom: 2rem;
+.course-button-group {
+	align-items: center;
+	flex-direction: column;
+	@include sm-and-up {
+		flex-direction: row;
+	}
 }
