@@ -139,26 +139,58 @@ export const SpecializationForm = () => {
 	// important elements
 	const selector = document.querySelector('[name="specialization"]');
 	const courseWrapper = document.querySelector('#courses');
-	const button = `<button class="level-action-button button-icon button-icon-left" id="go-next-btn" disabled>
-  <img class="cart-icon" src="img/icons/cart-dark.svg" alt="" />
-  Add to Cart</button>`;
+	const button = document.querySelector('#go-next-btn');
 
 	const state = {
-		woocommerceQuery: new URLSearchParams(),
-		selectedCourses: 0,
+		selectedCourses: [],
 		canContinue: false,
 	};
 
 	// build the select menu
 	buildSelector();
 
-	function checkboxListener(courseWrapper) {
-		const checkboxes = courseWrapper.querySelectorAll('[type="checkbox"]');
+	function checkboxListener() {
+		const checkboxes = document.querySelectorAll('#courses [type="checkbox"]');
+		checkboxes.forEach((checkbox) => {
+			console.log('here');
+			checkbox.addEventListener('change', () => {
+				if (checkbox.checked) {
+					//add to selected courses
+					state.selectedCourses.push(checkbox.value);
+				} else {
+					//remove from selected courses
+					const index = state.selectedCourses.indexOf(checkbox.value);
+					if (index > -1) {
+						state.selectedCourses.splice(index, 1);
+					}
+				}
+				state.canContinue = state.selectedCourses.length === 3 ? true : false;
+				checkboxes.forEach((c) => {
+					c.disabled = state.canContinue && !c.checked ? true : false;
+				});
+				console.log(state);
+				if (state.canContinue) {
+					// add params to the button
+					// eneble button
+					button.setAttribute(
+						'href',
+						'https://iccicoaching.com/cart/?clear-cart=true&add-to-cart=1218,' +
+							state.selectedCourses.join(',') +
+							',19650'
+					);
+					button.removeAttribute('disabled');
+				} else {
+					button.setAttribute('href', '#');
+					button.setAttribute('disabled', '');
+					//remove params from button
+					//disable button
+				}
+			});
+		});
 	}
 
 	function buildCourses(courseIds = []) {
-		let checkboxes = '';
-		const goNextButton = document.getElementById('go-next-btn');
+		let checkboxes = '<div class="instructions">Choose 3 Options:</div>';
 
 		if (courseIds.length > 0) {
 			checkboxes += courses
@@ -172,11 +204,11 @@ export const SpecializationForm = () => {
 				.join('');
 		}
 		courseWrapper.innerHTML = checkboxes;
-		if (!goNextButton) {
-			courseWrapper.insertAdjacentHTML('afterend', button);
-		}
+
+		checkboxListener();
 
 		// listen for changes
+		/*
 		const inputs = courseWrapper.querySelectorAll('[type="checkbox"]');
 		inputs.forEach((input) => {
 			input.addEventListener('change', () => {
@@ -187,7 +219,7 @@ export const SpecializationForm = () => {
 					goNextButton.disabled = true;
 				}
 			});
-		});
+		});*/
 	}
 
 	function buildSelector() {
@@ -219,10 +251,6 @@ export const SpecializationForm = () => {
 				caclcCard?.classList.remove('level-card-disabled');
 				cmclcCard?.classList.remove('level-card-disabled');
 				labels.forEach((label) => label.remove());
-				const goNextButton = document.querySelector('#go-next-btn');
-				if (goNextButton) {
-					goNextButton.remove();
-				}
 			}
 		});
 	}
