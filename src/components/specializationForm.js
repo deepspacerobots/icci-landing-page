@@ -176,7 +176,7 @@ export const SpecializationForm = () => {
 						'href',
 						'https://iccicoaching.com/cart/?clear-cart=true&add-to-cart=1218,' +
 							state.selectedCourses.join(',') +
-							',19650,2152,2154,1201'
+							',19650,542,2152,2154'
 					);
 					button.removeAttribute('disabled');
 				} else {
