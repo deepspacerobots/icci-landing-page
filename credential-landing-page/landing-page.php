@@ -1,23 +1,13 @@
 <?php
-require_once get_template_directory() . '/credential-landing-page/lib/functions.php';
+
 /**
  * Template Name: Credential Landing Page
  */
+require_once get_template_directory() . '/credential-landing-page/lib/functions.php';
 ?>
-<? get_template_part('/credential-landing-page/partials/header'); ?>
+<?php get_template_part('/credential-landing-page/partials/header'); ?>
 <!-- NAV | css:/components/nav.scss -->
-<nav class="nav">
-	<div class="container-lg">
-		<div class="nav-container">
-			<a href="/" title="home">
-				<img src="/wp-content/themes/icci/credential-landing-page/public/img/1cci-logo.png" alt="ICCI logo" class="logo" />
-			</a>
-			<a href="https://iccicoaching.com/cart/" target="_blank" title="cart">
-				<img class="cart-icon" src="/wp-content/themes/icci/credential-landing-page/public/img/icons/cart.svg" alt="cart" />
-			</a>
-		</div>
-	</div>
-</nav>
+<?php get_template_part('/credential-landing-page/partials/nav'); ?>
 
 <main class="layout">
 	<!-- HERO | css:/components/hero.scss -->
@@ -95,7 +85,7 @@ require_once get_template_directory() . '/credential-landing-page/lib/functions.
 						<h4 class="level-price">$629</h4>
 						<hr class="level-price-line" />
 					</div>
-					<a href="./caclc.html" class="level-link"><img src="/wp-content/themes/icci/credential-landing-page/public/img/icons/link.svg" class="level-link-icon" alt="" />Learn more</a>
+					<a href="/getstarted/caclc" class="level-link"><img src="/wp-content/themes/icci/credential-landing-page/public/img/icons/link.svg" class="level-link-icon" alt="" />Learn more</a>
 				</article>
 
 				<!-- Professional level -->
@@ -108,7 +98,7 @@ require_once get_template_directory() . '/credential-landing-page/lib/functions.
 						<div>
 							<h5 class="level-subtitle">C P C L C</h5>
 							<h3 class="level-title">Professional Level</h3>
-							<p class="level-description">Core training + a credential.</p>
+							<p class="level-description">Core training + a credential. View <a href="/getstarted/courses" target="_blank">Course Summaries.</a></p>
 						</div>
 					</div>
 					<form id="specializations-form">
@@ -123,7 +113,7 @@ require_once get_template_directory() . '/credential-landing-page/lib/functions.
 						<h4 class="level-price">$1,185</h4>
 						<hr class="level-price-line" />
 					</div>
-					<a href="./cpclc.html" class="level-link margin-top-auto"><img src="/wp-content/themes/icci/credential-landing-page/public/img/icons/link.svg" class="level-link-icon" alt="" />Learn more</a>
+					<a href="/getstarted/cpclc" class="level-link margin-top-auto"><img src="/wp-content/themes/icci/credential-landing-page/public/img/icons/link.svg" class="level-link-icon" alt="" />Learn more</a>
 				</article>
 
 				<!-- Master level -->
@@ -143,7 +133,7 @@ require_once get_template_directory() . '/credential-landing-page/lib/functions.
 						<img src="/wp-content/themes/icci/credential-landing-page/public/img/icons/phone.svg" alt="" class="level-call-icon" />Call for Pricing
 					</a>
 
-					<a href="./cmclc.html" class="level-link"><img src="/wp-content/themes/icci/credential-landing-page/public/img/icons/link.svg" class="level-link-icon" alt="" />Learn more</a>
+					<a href="/getstarted/cmclc" class="level-link"><img src="/wp-content/themes/icci/credential-landing-page/public/img/icons/link.svg" class="level-link-icon" alt="" />Learn more</a>
 				</article>
 			</div>
 		</div>
@@ -315,65 +305,7 @@ require_once get_template_directory() . '/credential-landing-page/lib/functions.
 	</section>
 
 	<!-- FAQ | css:/components/faq.scss -->
-	<section class="section-faq">
-		<div class="container-lg">
-			<h4 class="gradient-text faq-title">Frequently Asked Questions</h4>
-			<details>
-				<summary class="faq-question">
-					What are the differences between Christian Life Coaching and
-					counseling?
-				</summary>
-				<p class="faq-answer">
-					Life coaching emphasizes future-oriented growth, focusing on
-					unlocking potential and achieving personal or professional goals
-					through a proactive and solution-focused approach. Unlike
-					psychotherapy, which addresses past issues for symptom relief,
-					coaching fosters motivational and behavioral change, viewing
-					clients as capable of growth rather than needing repair. It aims
-					for healthier maturity and independence, not clinical diagnosis or
-					healing.
-				</p>
-			</details>
-
-			<details>
-				<summary class="faq-question">
-					What are the benefits of having an ICCI credential?
-				</summary>
-				<p class="faq-answer">
-					Lorem ipsum dolor sit, amet consectetur adipisicing elit. Suscipit
-					voluptatibus fugit beatae modi expedita iusto. Iste dolorum saepe,
-					facere laudantium laboriosam dolore. Quibusdam neque commodi quasi
-					magnam incidunt dolores voluptatibus?
-				</p>
-			</details>
-
-			<details>
-				<summary class="faq-question">
-					What distinguishes an ICCI credential from other credentials in
-					the field?
-				</summary>
-				<p class="faq-answer">
-					Lorem ipsum dolor sit amet consectetur adipisicing elit.
-					Architecto beatae eaque repellat reprehenderit sed assumenda at
-					nostrum harum molestiae qui? Distinctio at veniam qui. Et minima
-					velit rerum a architecto?
-				</p>
-			</details>
-
-			<details>
-				<summary class="faq-question">
-					How is an ICCI credential different than one from the
-					International Coaching Federation (ICF)?
-				</summary>
-				<p class="faq-answer">
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta
-					nihil impedit totam doloremque natus placeat porro dolores odio
-					quo voluptas blanditiis sint praesentium eligendi, eos, quod at
-					consequatur excepturi enim.
-				</p>
-			</details>
-		</div>
-	</section>
+	<?php get_template_part('/credential-landing-page/partials/faq'); ?>
 </main>
 
 <!-- FOOTER | css:/components/footer.scss -->
@@ -381,7 +313,7 @@ require_once get_template_directory() . '/credential-landing-page/lib/functions.
 	<div class="container-lg">
 		<div class="footer-container">
 			<div>
-				<a class="footer-logo-link" href="/"><img src="/wp-content/themes/icci/credential-landing-page/public/img/1cci-logo.png" class="footer-logo" alt="ICCI logo" /></a>
+				<a class="footer-logo-link" href="/getstarted"><img src="/wp-content/themes/icci/credential-landing-page/public/img/1cci-logo.png" class="footer-logo" alt="ICCI logo" /></a>
 				<p class="footer-description">
 					Bringing Life and Living Into Focus, Maximizing Each Person’s
 					God-Given Potential
@@ -409,4 +341,4 @@ require_once get_template_directory() . '/credential-landing-page/lib/functions.
 </footer>
 
 
-<? get_template_part('/credential-landing-page/partials/footer'); ?>
+<?php get_template_part('/credential-landing-page/partials/footer'); ?>
