@@ -180,7 +180,7 @@ export const SpecializationForm = () => {
 					);
 					button.removeAttribute('disabled');
 				} else {
-					button.setAttribute('href', '#');
+					button.setAttribute('href', '#specializations-form');
 					button.setAttribute('disabled', '');
 					//remove params from button
 					//disable button
@@ -225,7 +225,7 @@ export const SpecializationForm = () => {
 	function buildSelector() {
 		// build the options
 		let options =
-			'<option selected value="no-selection">Choose Specialization</option>';
+			'<option selected value="no-selection">Choose Credential</option>';
 		options += specializations
 			.map((s) => {
 				return `<option value="${s.title}">${s.title}</option>`;
