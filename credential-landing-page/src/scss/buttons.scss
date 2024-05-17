@@ -1,0 +1,71 @@
+.button,
+button,
+[type='button'],
+[type='reset'],
+[type='submit'] {
+	--button-height: 2rem;
+	color: var(--color-blue-dark);
+	background-color: var(--color-amber);
+	border: 2px solid var(--color-amber);
+	border-radius: calc(var(--button-height) / 2);
+	cursor: pointer;
+	display: inline-block;
+	text-decoration: none;
+	white-space: nowrap;
+	font: 400 0.8rem/1 var(--font-sans);
+	height: var(--button-height);
+	padding: 0.5rem 1rem;
+	transition: background-color 150ms, border-color 150ms;
+}
+
+:is(.button, button, [type='button'], [type='reset'], [type='submit']):where(
+		:disabled,
+		[disabled]
+	) {
+	filter: saturate(0.5) brightness(0.6);
+	cursor: not-allowed;
+}
+
+:is(.button, button, [type='button'], [type='reset'], [type='submit']):where(
+		:hover,
+		:focus
+	) {
+	background-color: var(--color-amber-light);
+	border-color: var(--color-amber-light);
+}
+
+.button-outline {
+	font-weight: 400;
+	background-color: var(--color-blue-dark);
+	color: var(--color-amber);
+	border-color: var(--color-amber);
+	border-width: 1px;
+}
+.button-outline:where(:hover, :focus) {
+	background-color: var(--color-blue-darker);
+	color: var(--color-amber-light);
+	border-color: var(--color-amber-light);
+}
+.button-group {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.5rem;
+}
+.button-icon {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	img {
+		width: 1rem;
+	}
+	&-right {
+		img {
+			margin-left: 0.5rem;
+		}
+	}
+	&-left {
+		img {
+			margin-right: 0.5rem;
+		}
+	}
+}

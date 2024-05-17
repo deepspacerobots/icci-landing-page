@@ -1,0 +1,96 @@
+.roadmap-subtitle {
+	letter-spacing: 0.2rem;
+	font-size: 0.6rem;
+	text-transform: uppercase;
+	font-weight: 400;
+	margin-bottom: 0.3rem;
+}
+
+.roadmap-title {
+	font-size: 1.5rem;
+	margin-bottom: 1.5rem;
+}
+
+.roadmap-steps-container {
+	display: grid;
+	gap: 0.8rem;
+	grid-template-columns: 1fr;
+	margin-bottom: 1rem;
+	@include sm-and-up {
+		grid-template-columns: repeat(2, 1fr);
+	}
+	@include md-and-up {
+		grid-template-columns: repeat(3, 1fr);
+	}
+}
+
+.roadmap-step-card {
+	padding: 0.8rem;
+	border-radius: 0.3rem;
+	border: 1px solid var(--color-blue-light);
+	background-color: rgba(1, 103, 165, 0.19);
+	&.roadmap-step-card-selected {
+		border: 1px solid var(--color-amber);
+		background: var(--color-blue-light);
+	}
+}
+
+.roadmap-step-number-circle {
+	margin-bottom: 1rem;
+	font-family: var(--font-serif);
+	position: relative;
+	font-size: 2rem;
+	display: inline-block;
+	width: 2.7rem;
+	height: 2.7rem;
+	text-align: center;
+	span {
+		opacity: 50%;
+		border-radius: 50%;
+		position: absolute;
+		left: 50%;
+		top: -50%;
+		display: block;
+		transform: translate(-50%, 50%) rotate(45deg);
+		border: 1px solid var(--color-blue-lighter);
+		border-bottom-color: var(--color-blue-light);
+		border-left-color: var(--color-blue-light);
+		width: 2.7rem;
+		height: 2.7rem;
+	}
+}
+
+.roadmap-step-title {
+	margin-bottom: 0.4rem;
+	font-size: 1rem;
+	@include sm-and-up {
+		font-size: 1.3rem;
+	}
+}
+
+.roadmap-step-description {
+	font-size: 0.8rem;
+}
+
+.roadmap-buy-container {
+	border: 1px solid #011936;
+	padding: 1rem 0.8rem 0.8rem;
+	border-radius: 0.3rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.roadmap-buy-title {
+	font-family: var(--font-serif);
+	font-size: 0.8rem;
+	text-align: center;
+	margin-bottom: 0.8rem;
+}
+
+.roadmap-comment {
+	text-align: center;
+	font-size: 0.8rem;
+	margin-bottom: 5rem;
+}

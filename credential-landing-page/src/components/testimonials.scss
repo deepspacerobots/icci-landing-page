@@ -1,0 +1,84 @@
+.testimonials-container {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 4rem;
+	@include sm-and-up {
+		flex-direction: row;
+	}
+}
+
+.testimonials-left-circle {
+	position: absolute;
+	border: 1px solid var(--color-blue-lighter);
+	width: 25rem;
+	height: 25rem;
+	top: 100rem;
+	left: -10rem;
+	border-radius: 50%;
+	z-index: -1;
+	display: none;
+	@include md-and-up {
+		display: block;
+	}
+}
+
+.testimonials-title {
+	font-size: 1.5rem;
+	margin-bottom: 0.4rem;
+
+	@include sm-and-up {
+		width: 35%;
+		font-size: 2rem;
+	}
+}
+
+.testimonials {
+	position: relative;
+	@include sm-and-up {
+		width: 60%;
+	}
+}
+
+.testimonials-corner-quote {
+	position: absolute;
+	width: 4rem;
+	right: 0;
+	top: -3rem;
+}
+
+.testimonial-text {
+	font-size: 0.9rem;
+	@include sm-and-up {
+		font-size: 0.8rem;
+	}
+}
+
+.testimonial-student-container {
+	display: flex;
+	align-items: center;
+}
+
+.testimonial-student-text {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+.testimonial-student-pic {
+	width: 3rem;
+	border-radius: 50%;
+	margin-right: 0.8rem;
+}
+
+.testimonial-student-name {
+	margin-bottom: 0;
+	font-size: 0.9rem;
+	line-height: 1;
+}
+
+.testimonial-student-title {
+	font-size: 0.8rem;
+	@include sm-and-up {
+		font-size: 0.7rem;
+	}
+}

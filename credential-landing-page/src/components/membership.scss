@@ -1,0 +1,110 @@
+.section-membership {
+	position: relative;
+}
+
+.membership-container {
+	border: 1px solid var(--color-blue-lighter);
+	border-radius: 18rem 18rem 8rem 1rem;
+	margin-bottom: 7rem;
+	position: relative;
+	padding-bottom: 1.5rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	@include md-and-up {
+		display: block;
+		padding: 1rem 3rem 1rem 19rem;
+		border-radius: 15rem;
+	}
+}
+
+.membership-circle {
+	border-radius: 50%;
+	width: 4rem;
+	height: 4rem;
+	border: 1px solid var(--color-blue-lighter);
+	position: absolute;
+	bottom: 1.5rem;
+	transform: translateX(-50%);
+	display: block;
+	@include md-and-up {
+		display: none;
+	}
+}
+
+.membership-picture {
+	object-fit: cover;
+	object-position: left;
+	border-radius: 50%;
+	margin-top: -2rem;
+	margin-bottom: 2.5rem;
+	width: 20rem;
+	max-width: 100%;
+	aspect-ratio: 1 / 1;
+	@include md-and-up {
+		position: absolute;
+		margin-top: 0;
+		width: 17rem;
+		height: 17rem;
+		left: 0;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+}
+
+.membership-text-container {
+	padding: 0 1rem;
+	@include md-and-up {
+		padding: 0;
+	}
+}
+
+.membership-subtitle {
+	letter-spacing: 0.2rem;
+	font-size: 0.8rem;
+	text-transform: uppercase;
+	font-weight: 400;
+	margin-bottom: 0.2rem;
+	@include sm-and-up {
+		font-size: 0.6rem;
+	}
+}
+
+.membership-title {
+	font-size: 2rem;
+	margin-bottom: 0.7rem;
+	@include sm-and-up {
+		font-size: 1.7rem;
+	}
+}
+
+.membership-description {
+	font-size: 1rem;
+	strong {
+		color: var(--color-amber);
+	}
+	@include sm-and-up {
+		font-size: 0.8rem;
+	}
+}
+
+.membership-lists-container {
+	font-size: 1rem;
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+	ul {
+		width: 100%;
+		@include md-and-up {
+			width: 45%;
+		}
+	}
+	li {
+		margin-bottom: 0.2rem;
+	}
+
+	@include sm-and-up {
+		flex-direction: row;
+		font-size: 0.8rem;
+	}
+}

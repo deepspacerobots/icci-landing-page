@@ -1,0 +1,56 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+* {
+	margin: 0;
+}
+:root {
+	color-scheme: dark;
+	--color-text-light: #ffffff;
+	--color-text: #e6f1f9;
+	--color-text-dark: #bbc9d3;
+
+	--color-blue-even-lighter: #7da5de;
+	--color-blue-lighter: #4280d8;
+	--color-blue-light: #045b96;
+	--color-blue: #27579b;
+	--color-blue-dark: #092d59;
+	--color-blue-darker: #011936;
+	--color-blue-step-border: #1c457e;
+
+	--color-amber-light: #ffbe55;
+	--color-amber: #fd9d02;
+	--color-amber-dark: #fd6c02;
+
+	--color-link-default: var(--color-amber);
+	--color-link-hover: var(--color-amber-light);
+	--color-link-visited: #ce93d8;
+
+	--font-sans: 'Lato', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+		Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+	--font-serif: 'Playfair Display', Palatino, 'Palatino Linotype',
+		'Palatino LT STD', 'Book Antiqua', Georgia, serif;
+}
+
+html {
+	font-size: clamp(1rem, calc(0.9rem + 0.5vw), 1.3rem);
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: var(--font-sans);
+	line-height: 1.5;
+	color: var(--color-text);
+	background: linear-gradient(
+		to top,
+		var(--color-blue) min(20%, 30rem),
+		var(--color-blue-dark)
+	);
+	height: 100%;
+	line-height: 1.5;
+	-webkit-font-smoothing: antialiased;
+	overflow-x: hidden;
+	position: relative;
+}

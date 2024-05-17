@@ -1,0 +1,21 @@
+{
+	"name": "icci",
+	"private": true,
+	"version": "0.0.0",
+	"type": "module",
+	"scripts": {
+		"dev": "vite & vite build --watch",
+		"build": "vite build",
+		"preview": "vite preview"
+	},
+	"devDependencies": {
+		"dotenv": "latest",
+		"sass": "latest",
+		"vite": "latest",
+		"vite-plugin-mkcert": "latest",
+		"vite-plugin-restart": "latest"
+	},
+	"dependencies": {
+		"blaze-slider": "latest"
+	}
+}

@@ -1,0 +1,11 @@
+{
+  "src/script.js": {
+    "file": "assets/app-BPn24NKK.js",
+    "name": "app",
+    "src": "src/script.js",
+    "isEntry": true,
+    "css": [
+      "assets/app-BUHTDD-O.css"
+    ]
+  }
+}

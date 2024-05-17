@@ -1,0 +1,24 @@
+body {
+	display: flex;
+	flex-direction: column;
+	min-height: 100dvh;
+	min-height: 100vh;
+}
+main {
+	flex-grow: 1;
+}
+.container-md {
+	--container-width: var(--breakpoint-md);
+}
+.container-lg {
+	--container-width: var(--breakpoint-lg);
+}
+.container-md,
+.container-lg {
+	display: grid;
+	grid-template-columns: 1rem 1fr minmax(0, var(--container-width)) 1fr 1rem;
+	> * {
+		min-width: 0;
+		grid-column: 3;
+	}
+}
